@@ -1,0 +1,13 @@
+﻿@using Test2.Models
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Extensions
+@using Test2.Constant
+
+@{string userName = Context.Session.GetString(SessionKey.User.UserFullName); }
+@if (userName != null && userName != "")
+{
+    <li class="nav-item">
+        <a class="nav-link font-weight-bold" id="naitem" asp-area="" asp-controller="User" asp-action="Index"><i class="fas fa-user" style="color:#eb34bd;"></i>   Quản trị</a>
+    </li>
+}
+
